@@ -1,0 +1,22 @@
+!!! 5
+%html{ lang: "fr" }
+	%head
+		%title= @page_title || "Upla: uploader simplement !"
+		%meta{ charset: "utf-8" }
+		%link{ rel: "stylesheet", type: "text/css", href: "/css/bootstrap.min.css" }
+		%link{ rel: "stylesheet", type: "text/css", href: "/css/bootstrap-responsive.min.css" }
+		%link{ rel: "stylesheet", type: "text/css", href: "/css/style.css" }
+
+	%body
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					%a{ class: "brand", href: "/" }= "Upla"
+
+		.container.marge-top
+			= yield
+
+			%footer
+				%hr
+				%p
+					&copy; Compagnie 2012

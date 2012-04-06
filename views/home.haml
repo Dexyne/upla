@@ -1,0 +1,9 @@
+
+#hero-unit
+	%h1 Uploader simplement !
+
+%form{ action: "/upload", method: "POST", enctype: "multipart/form-data" }
+	%label Fichier à uploader :
+	%input{ type: "file", name: "file_uploaded" }
+
+	%input{ type: "submit", value: "Uploader", class: "btn btn-primary btn-large" }
