@@ -1,8 +1,7 @@
-require 'rubygems'
+# upla.rb
 require 'sinatra'
-#require 'rack-flash'
+require 'sinatra/flash'
 
-#use Rack::Flash
 enable :sessions
 
 get "/" do
@@ -12,8 +11,12 @@ end
 # Handle POST-request (Receive and save the uploaded file)
 post "/upload" do
 	File.open('public/uploads/' + params['file_to_upload'][:filename], "w") do |f|
-		f.write(params['file_to_upload'][:tempfile].read)
+		if f.write(params['file_to_upload'][:tempfile].read)
+			flash[:info] = "Fichier envoy&eacute; avec succ&egrave;s."
+		else
+			flash[:warning] = "Une erreur est survenue."
+		end
 	end
-	# flash[:notice] = "Fichier uploadé avec succès."
+
 	redirect "/"
 end
