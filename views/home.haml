@@ -5,14 +5,15 @@
 			%h1 Uploader simplement !
 		%input{ type: "file", name: "file_to_upload", id: "file_to_upload" }
 
-		/%input{ type: "submit", value: "Uploader", class: "btn btn-primary btn-large" }
 		%button{ type: "submit", class: "btn btn-primary btn-large" }
 			%i.icon-upload
 			Upload!
 
+	= styled_flash
+
 .row
 	.span4
-		%h2 Caracéristiques
+		%h2 Caractéristiques
 		%p
 			%dl.dl-horizontal
 				%dt Limite par fichier :
