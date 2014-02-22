@@ -1,35 +1,25 @@
 
-.hero-unit
-	%form{ action: "/upload", method: "post", enctype: "multipart/form-data" }
-		%label{ for: "file_to_upload" }
-			%h1 Uploader simplement !
-		%input{ type: "file", name: "file_to_upload", id: "file_to_upload" }
+.jumbotron
+	%header
+		%h1 Upla et voilà !
+
+	%form{ role: "form", action: "/upload", method: "post", enctype: "multipart/form-data" }
+		.form-group
+			%label{ for: "file-to-upload" } Choix du fichier à uploader
+			%input.form-control{ type: "file", name: "file_to_upload", id: "file-to-upload" }
+			%p.help-block Tous fichiers acceptés, limitation à 5Mo par fichier.
 
 		%button{ type: "submit", class: "btn btn-primary btn-large" }
-			%i.icon-upload
 			Upload!
 
 	= styled_flash
 
 .row
-	.span4
-		%h2 Caractéristiques
-		%p
-			%dl.dl-horizontal
-				%dt Limite par fichier :
-				%dd 5Mo
-				%dt Fichiers acceptés :
-				%dd Tous ! :)
-
-	.span4
+	.col-xs-12
 		%h2 Votre dépôt
+
 		%p
-			Vous pouvez vous inscrire pour obtenir un "dépôt". Le dépôt n'est autre qu'un dossier qui vous est attribué et qui vous permet d'y ranger vos fichiers uploadé.
+			Créer un dépôt en vous inscrivant pour ainsi mettre en place vos propres dossiers et vous organiser !
 			%br
-			Créer vos propres dossiers pour vous organiser !
-			%br
-			Placer des attributs (privées ou publics) sur vos dossiers / fichiers si vous désirez ou non les partager.
-		%p
-			%a{ href: "#", class: "btn" } Et plus encore
-	.span4
+			Placer des attributs (privés ou publics) sur vos dossiers ou fichiers si vous désirez ou non les partager.
 

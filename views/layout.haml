@@ -1,25 +1,24 @@
 !!! 5
 %html{ lang: "fr" }
-	%head
-		%title= @page_title || "Upla: uploader simplement !"
-		%meta{ charset: "utf-8" }
-		%meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
-		%link{ rel: "stylesheet", href: "/css/bootstrap.min.css" }
-		%link{ rel: "stylesheet", href: "/css/bootstrap-responsive.min.css" }
-		%link{ rel: "stylesheet", href: "/css/style.css" }
+  %head
+    %title= @page_title || "Upla : uploader simplement !"
+    %meta{ charset: "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %link{ rel: "stylesheet", href: "//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" }
+    %link{ rel: "stylesheet", href: "/css/style.css" }
 
-	%body
-		.navbar.navbar-fixed-top
-			.navbar-inner
-				.container
-					%a{ class: "brand", href: "/" }
-						%i{ class: "icon-home icon-white" }
-						Upla
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top{ role: "navigation" }
+      .container
+        %a.navbar-brand{ href: "/" }
+          Upla
 
-		.container
-			= yield
+    .container
+      = yield
 
-			%hr
-			%footer
-				%p
-					&copy; Compagnie 2012
+      %hr
+      %footer
+        %p
+          &copy; Upla 2012-2014
+
+    %script{ src: "//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" }
