@@ -1,0 +1,30 @@
+{
+  "name": "upla",
+  "description": "A little uploading file application.",
+  "version": "0.1.0",
+  "private": true,
+  "main": "gulpfile.js",
+  "dependencies": {
+    "coffee-script": "~1.7.1",
+    "gulp": "~3.5.2",
+    "gulp-util": "~2.2.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Dexyne/upla.git"
+  },
+  "keywords": [
+    "upload",
+    "website"
+  ],
+  "author": "Aurélien Léger",
+  "license": "private",
+  "bugs": {
+    "url": "https://github.com/Dexyne/upla/issues"
+  },
+  "homepage": "https://github.com/Dexyne/upla"
+}
