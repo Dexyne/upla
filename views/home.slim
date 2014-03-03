@@ -5,9 +5,9 @@
 
     form role="form" action="/upload" method="post" enctype="multipart/form-data"
       .form-group
-        label for="file-to-upload" Choix du fichier à uploader
+        label for="file-to-upload" Which file to upload?
         input#file-to-upload.form-control type="file" name="file_to_upload"
-        p.help-block Tous fichiers acceptés, limitation à 5Mo par fichier.
+        p.help-block All files accepted, limit to 5Mo for one file.
 
       button type="submit" class="btn btn-primary btn-large" Upload!
 
@@ -15,10 +15,8 @@
 
 .row
   .col-xs-12
-    h2 Votre dépôt
+    h2 Your repository (in future)
 
-    p
-      | Créer un dépôt en vous inscrivant pour ainsi mettre en place vos propres dossiers et vous organiser !
-        br
-        Placer des attributs (privés ou publics) sur vos dossiers ou fichiers si vous désirez ou non les partager.
+    ul
+      li Register to keep your files easily!
 
