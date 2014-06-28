@@ -3,13 +3,13 @@
   header
     h1 Upla et voilà !
 
-    form role="form" action="/upload" method="post" enctype="multipart/form-data"
+    form(role="form" action="/upload" method="post" enctype="multipart/form-data")
       .form-group
-        label for="file-to-upload" Which file to upload?
-        input#file-to-upload.form-control type="file" name="file_to_upload"
-        p.help-block All files accepted, limit to 5Mo for one file.
+        label(for="file-to-upload") Which file to upload?
+        input#file-to-upload.form-control(type="file" name="file_to_upload")
+        p.help-block All files accepted, limit to 5Mo/file.
 
-      button type="submit" class="btn btn-primary btn-large" Upload!
+      button(type="submit" class="btn btn-primary btn-large") Upload!
 
     == styled_flash
 
